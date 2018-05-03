@@ -9,6 +9,18 @@
 			"revisionTime": "2017-11-12T03:14:02Z"
 		},
 		{
+			"checksumSHA1": "IkPM2QLv9urri7S49wzroQx9oXA=",
+			"path": "github.com/gorilla/context",
+			"revision": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42",
+			"revisionTime": "2016-08-17T18:46:32Z"
+		},
+		{
+			"checksumSHA1": "u+yjS8ZLCVRmjsMh26jHaJ4itTc=",
+			"path": "github.com/gorilla/mux",
+			"revision": "ded0c29b24f96f46cf349e6701b099db601cf8ec",
+			"revisionTime": "2018-05-01T03:11:36Z"
+		},
+		{
 			"checksumSHA1": "3ZwiIK+gMamY34wKVVrny+8NHRY=",
 			"path": "github.com/mongodb/mongo-go-driver/bson",
 			"revision": "68b1723ae3007e23f496e6f95da3d8acde4aae41",

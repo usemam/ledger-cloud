@@ -13,6 +13,18 @@
 			"path": "github.com/gomodule/redigo/redis",
 			"revision": "9352ab68be133885e31a43661cc42a220cb8e821",
 			"revisionTime": "2018-04-01T19:18:55Z"
+		},
+		{
+			"checksumSHA1": "IkPM2QLv9urri7S49wzroQx9oXA=",
+			"path": "github.com/gorilla/context",
+			"revision": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42",
+			"revisionTime": "2016-08-17T18:46:32Z"
+		},
+		{
+			"checksumSHA1": "u+yjS8ZLCVRmjsMh26jHaJ4itTc=",
+			"path": "github.com/gorilla/mux",
+			"revision": "ded0c29b24f96f46cf349e6701b099db601cf8ec",
+			"revisionTime": "2018-05-01T03:11:36Z"
 		}
 	],
 	"rootPath": "github.com/usemam/ledger-cloud/account-api"
