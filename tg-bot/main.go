@@ -6,6 +6,7 @@ import (
 	"net/http"
 
 	api "github.com/go-telegram-bot-api/telegram-bot-api"
+	cmd "github.com/usemam/ledger-cloud/tg-bot/commands"
 	configuration "github.com/usemam/ledger-cloud/tg-bot/configuration"
 )
 
@@ -16,7 +17,17 @@ func processUpdate(update api.Update, bot *api.BotAPI) error {
 
 	var reply string
 	if update.Message.IsCommand() {
-		reply = fmt.Sprintf("Command = %s, Args = %s", update.Message.Command(), update.Message.CommandArguments())
+		command, err := cmd.CreateCommand(update.Message.Command())
+		if err != nil {
+			reply = fmt.Sprintf("Error: %v", err)
+			log.Println(err)
+		} else {
+			reply, err = command.Execute(update.Message.CommandArguments())
+			if err != nil {
+				reply = fmt.Sprintf("Error: %v", err)
+				log.Println(err)
+			}
+		}
 	} else {
 		reply = "Please, use commands only."
 	}
