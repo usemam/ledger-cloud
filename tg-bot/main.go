@@ -14,9 +14,14 @@ func processUpdate(update api.Update, bot *api.BotAPI) error {
 		return nil
 	}
 
-	message := api.NewMessage(
-		update.Message.Chat.ID,
-		fmt.Sprintf("Hello, %s! This bot currently does nothing. Please, come back later!", update.Message.Chat.UserName))
+	var reply string
+	if update.Message.IsCommand() {
+		reply = fmt.Sprintf("Command = %s, Args = %s", update.Message.Command(), update.Message.CommandArguments())
+	} else {
+		reply = "Please, use commands only."
+	}
+
+	message := api.NewMessage(update.Message.Chat.ID, reply)
 	_, err := bot.Send(message)
 	return err
 }
