@@ -3,6 +3,12 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "MjRZK7rP2kJng5CfnRDw6tYC8r4=",
+			"path": "github.com/araddon/dateparse",
+			"revision": "1e64c9214ab00f5ed65d81b8d4db2f6496aa2065",
+			"revisionTime": "2018-05-04T01:09:23Z"
+		},
+		{
 			"checksumSHA1": "FUjj0SINnhIy6tek+IeJp+jfFV4=",
 			"path": "github.com/go-telegram-bot-api/telegram-bot-api",
 			"revision": "212b1541150cbfcc268fbeb3b15c14383e638409",
