@@ -13,19 +13,19 @@ type Command interface {
 func CreateCommand(name string) (Command, error) {
 	switch name {
 	case "new_account":
-		return nil, nil
+		return &NewAccountCommand{}, nil
 	case "transfer":
-		return nil, nil
+		return &TransferCommand{}, nil
 	case "debit":
-		return nil, nil
+		return &DebitCommand{}, nil
 	case "credit":
-		return nil, nil
+		return &CreditCommand{}, nil
 	case "show_accounts":
 		return &ShowAccountsCommand{}, nil
 	case "last":
-		return nil, nil
+		return &LastCommand{}, nil
 	case "total":
-		return nil, nil
+		return &TotalCommand{}, nil
 	default:
 		return nil, &unrecognizedCommandError{name}
 	}
