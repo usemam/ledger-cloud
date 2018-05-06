@@ -6,7 +6,7 @@ import (
 	"net/http"
 	str "strings"
 
-	dc "github.com/usemam/ledger-cloud/datacontract"
+	dc "github.com/usemam/ledger-cloud/data-contract"
 	configuration "github.com/usemam/ledger-cloud/tg-bot/configuration"
 )
 
