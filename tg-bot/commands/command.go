@@ -10,24 +10,24 @@ type Command interface {
 }
 
 // CreateCommand - factory method to create command instance based on provided name
-func CreateCommand(name string) (Command, error) {
-	switch name {
+func CreateCommand(cmdName string, userID string) (Command, error) {
+	switch cmdName {
 	case "new_account":
-		return &NewAccountCommand{}, nil
+		return &NewAccountCommand{userID}, nil
 	case "transfer":
-		return &TransferCommand{}, nil
+		return &TransferCommand{userID}, nil
 	case "debit":
-		return &DebitCommand{}, nil
+		return &DebitCommand{userID}, nil
 	case "credit":
-		return &CreditCommand{}, nil
+		return &CreditCommand{userID}, nil
 	case "show_accounts":
-		return &ShowAccountsCommand{}, nil
+		return &ShowAccountsCommand{userID}, nil
 	case "last":
-		return &LastCommand{}, nil
+		return &LastCommand{userID}, nil
 	case "total":
-		return &TotalCommand{}, nil
+		return &TotalCommand{userID}, nil
 	default:
-		return nil, &unrecognizedCommandError{name}
+		return nil, &unrecognizedCommandError{cmdName}
 	}
 }
 

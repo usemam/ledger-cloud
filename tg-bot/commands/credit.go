@@ -2,6 +2,7 @@ package commands
 
 // CreditCommand - command to deposit money to account from earning category
 type CreditCommand struct {
+	UserID string
 }
 
 // Execute - Command interface implementation

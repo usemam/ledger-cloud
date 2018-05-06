@@ -7,7 +7,7 @@ import (
 
 	api "github.com/go-telegram-bot-api/telegram-bot-api"
 	cmd "github.com/usemam/ledger-cloud/tg-bot/commands"
-	configuration "github.com/usemam/ledger-cloud/tg-bot/configuration"
+	"github.com/usemam/ledger-cloud/tg-bot/configuration"
 )
 
 func processUpdate(update api.Update, bot *api.BotAPI) error {
@@ -17,7 +17,7 @@ func processUpdate(update api.Update, bot *api.BotAPI) error {
 
 	var reply string
 	if update.Message.IsCommand() {
-		command, err := cmd.CreateCommand(update.Message.Command())
+		command, err := cmd.CreateCommand(update.Message.Command(), update.Message.Chat.UserName)
 		if err != nil {
 			reply = fmt.Sprintf("Error: %v", err)
 			log.Println(err)

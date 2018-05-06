@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	configuration "github.com/usemam/ledger-cloud/transaction-api/configuration"
+	"github.com/usemam/ledger-cloud/transaction-api/configuration"
 )
 
 func testHandler(w http.ResponseWriter, r *http.Request) {

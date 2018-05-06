@@ -2,6 +2,7 @@ package commands
 
 // NewAccountCommand - command to create new account
 type NewAccountCommand struct {
+	UserID string
 }
 
 // Execute - Command interface implementation

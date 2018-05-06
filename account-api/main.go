@@ -5,16 +5,13 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	configuration "github.com/usemam/ledger-cloud/account-api/configuration"
+	"github.com/usemam/ledger-cloud/account-api/configuration"
+	"github.com/usemam/ledger-cloud/account-api/handlers"
 )
-
-func testHandler(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Test"))
-}
 
 func main() {
 	router := mux.NewRouter()
-	router.HandleFunc("/", testHandler)
+	router.HandleFunc("/state/{user_id}", handlers.ShowAccountsHandler)
 
 	cfg := configuration.New()
 	log.Fatal(http.ListenAndServe(":"+cfg.Port, router))
