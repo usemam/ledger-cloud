@@ -6,8 +6,8 @@ import (
 	"net/http"
 	str "strings"
 
+	dc "github.com/usemam/ledger-cloud/datacontract"
 	configuration "github.com/usemam/ledger-cloud/tg-bot/configuration"
-	dc "github.com/usemam/ledger-cloud/tg-bot/datacontract"
 )
 
 // ShowAccountsCommand - command for getting current state of all registered accounts
@@ -44,7 +44,7 @@ func (cmd *ShowAccountsCommand) Execute(args string) (string, error) {
 		if replyBuilder.Len() > 0 {
 			replyBuilder.WriteString("\n")
 		}
-		replyBuilder.WriteString(fmt.Sprintf("%d. %s - $%f", i, account.Name, account.Balance))
+		replyBuilder.WriteString(fmt.Sprintf("%d. %s - $%f", i+1, account.Name, account.Balance))
 	}
 
 	return replyBuilder.String(), nil

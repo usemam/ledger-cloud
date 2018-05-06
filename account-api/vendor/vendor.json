@@ -31,6 +31,12 @@
 			"path": "github.com/gorilla/mux",
 			"revision": "ded0c29b24f96f46cf349e6701b099db601cf8ec",
 			"revisionTime": "2018-05-01T03:11:36Z"
+		},
+		{
+			"checksumSHA1": "KFdO+X3sKbw7JqAA03vYdnH52QU=",
+			"path": "github.com/usemam/ledger-cloud/datacontract",
+			"revision": "26ef75c9747db9d645eb39856ec5be912ede83ca",
+			"revisionTime": "2018-05-06T11:02:58Z"
 		}
 	],
 	"rootPath": "github.com/usemam/ledger-cloud/account-api"
