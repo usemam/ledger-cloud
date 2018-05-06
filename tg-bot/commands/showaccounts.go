@@ -6,8 +6,8 @@ import (
 	"net/http"
 	str "strings"
 
-	dc "github.com/usemam/ledger-cloud/data-contract"
 	configuration "github.com/usemam/ledger-cloud/tg-bot/configuration"
+	dc "github.com/usemam/ledger-cloud/tg-bot/datacontract"
 )
 
 // ShowAccountsCommand - command for getting current state of all registered accounts

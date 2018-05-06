@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	dc "github.com/usemam/ledger-cloud/data-contract"
+	dc "github.com/usemam/ledger-cloud/account-api/datacontract"
 )
 
 // ShowAccountsHandler - handles /state/{user_id} query
