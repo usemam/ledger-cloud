@@ -13,4 +13,9 @@
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
 .env
-*/vendor/*/
+
+!*/vendor/
+*/vendor/*
+!*/vendor/github.com/
+*/vendor/github.com/*
+!*/vendor/github.com/usemam/

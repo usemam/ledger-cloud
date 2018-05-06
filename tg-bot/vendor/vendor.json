@@ -23,8 +23,8 @@
 		{
 			"checksumSHA1": "KFdO+X3sKbw7JqAA03vYdnH52QU=",
 			"path": "github.com/usemam/ledger-cloud/datacontract",
-			"revision": "26ef75c9747db9d645eb39856ec5be912ede83ca",
-			"revisionTime": "2018-05-06T11:02:58Z"
+			"revision": "7e112e6dbf2d899194c7484f9a527e6318d58f0a",
+			"revisionTime": "2018-05-06T11:30:54Z"
 		}
 	],
 	"rootPath": "github.com/usemam/ledger-cloud/tg-bot"
