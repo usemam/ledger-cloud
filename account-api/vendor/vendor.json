@@ -35,14 +35,14 @@
 		{
 			"checksumSHA1": "pSqzSFpQpj8Ib+wPVIhoLF8ZDI0=",
 			"path": "github.com/usemam/ledger-cloud/datacontract",
-			"revision": "e43ca3976da48158eafa218c626c807c32afcf07",
-			"revisionTime": "2018-05-07T06:23:01Z"
+			"revision": "55090e091ebb4abfbb6ae23ab8dc3e625343be63",
+			"revisionTime": "2018-05-07T19:07:08Z"
 		},
 		{
 			"checksumSHA1": "6CTNGO0Bzt3bU1HZQg0IREJ7kYA=",
 			"path": "github.com/usemam/ledger-cloud/money",
-			"revision": "e43ca3976da48158eafa218c626c807c32afcf07",
-			"revisionTime": "2018-05-07T06:23:01Z"
+			"revision": "55090e091ebb4abfbb6ae23ab8dc3e625343be63",
+			"revisionTime": "2018-05-07T19:07:08Z"
 		}
 	],
 	"rootPath": "github.com/usemam/ledger-cloud/account-api"
