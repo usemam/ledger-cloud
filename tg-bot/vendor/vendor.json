@@ -21,10 +21,16 @@
 			"revisionTime": "2013-10-20T00:18:33Z"
 		},
 		{
-			"checksumSHA1": "KFdO+X3sKbw7JqAA03vYdnH52QU=",
+			"checksumSHA1": "pSqzSFpQpj8Ib+wPVIhoLF8ZDI0=",
 			"path": "github.com/usemam/ledger-cloud/datacontract",
-			"revision": "7e112e6dbf2d899194c7484f9a527e6318d58f0a",
-			"revisionTime": "2018-05-06T11:30:54Z"
+			"revision": "e43ca3976da48158eafa218c626c807c32afcf07",
+			"revisionTime": "2018-05-07T06:23:01Z"
+		},
+		{
+			"checksumSHA1": "6CTNGO0Bzt3bU1HZQg0IREJ7kYA=",
+			"path": "github.com/usemam/ledger-cloud/money",
+			"revision": "e43ca3976da48158eafa218c626c807c32afcf07",
+			"revisionTime": "2018-05-07T06:23:01Z"
 		}
 	],
 	"rootPath": "github.com/usemam/ledger-cloud/tg-bot"

@@ -22,3 +22,77 @@ func TestStringFormatting(t *tst.T) {
 		}
 	}
 }
+
+func TestAddZero(t *tst.T) {
+	var (
+		whole uint = 5
+		part  uint = 20
+	)
+	m := Money{whole, part}.Add(Money{})
+	if m.Whole != whole || m.Part != part {
+		t.Log("Adding zero resulted amounts different from original.")
+		t.Fail()
+	}
+}
+
+func TestSubZero(t *tst.T) {
+	var (
+		whole uint = 5
+		part  uint = 20
+	)
+	m := Money{whole, part}.Sub(Money{})
+	if m.Whole != whole || m.Part != part {
+		t.Log("Subtracting zero resulted amounts different from original.")
+		t.Fail()
+	}
+}
+
+func TestAddPartCarryToWhole(t *tst.T) {
+	var (
+		whole1 uint = 5
+		part1  uint = 20
+		whole2 uint = 1
+		part2  uint = 80
+	)
+	m := Money{whole1, part1}.Add(Money{whole2, part2})
+	if m.Whole != (whole1+whole2+1) || m.Part != 0 {
+		t.Log("Part carry when adding two values is incorrect.")
+		t.Fail()
+	}
+}
+
+func TestSubPartCarryToWhole(t *tst.T) {
+	var (
+		whole1 uint = 5
+		part1  uint = 20
+		whole2 uint = 1
+		part2  uint = 80
+	)
+	m := Money{whole1, part1}.Sub(Money{whole2, part2})
+	if m.Whole != (whole1-whole2-1) || m.Part != (100+part1-part2) {
+		t.Log("Part carry when adding two values is incorrect.")
+		t.Fail()
+	}
+}
+
+func TestGtZero(t *tst.T) {
+	res := Money{}.Gt(Money{})
+	if res {
+		t.Log("Zero is not greater than zero.")
+		t.Fail()
+	}
+}
+
+func TestGtTrue(t *tst.T) {
+	res1, res2 := Money{5, 0}.Gt(Money{4, 0}), Money{5, 20}.Gt(Money{5, 0})
+	if !res1 || !res2 {
+		t.Fail()
+	}
+}
+
+func TestGtFalse(t *tst.T) {
+	res1, res2 := Money{4, 0}.Gt(Money{5, 0}), Money{5, 0}.Gt(Money{5, 20})
+	if res1 || res2 {
+		t.Fail()
+	}
+}

@@ -7,6 +7,7 @@ import (
 
 	"github.com/gorilla/mux"
 	dc "github.com/usemam/ledger-cloud/datacontract"
+	m "github.com/usemam/ledger-cloud/money"
 )
 
 // ShowAccountsHandler - handles /state/{user_id} query
@@ -19,8 +20,8 @@ func ShowAccountsHandler(w http.ResponseWriter, r *http.Request) {
 		dc.Account{
 			UserID:      userID,
 			Name:        "Tinkoff Black",
-			Balance:     1000.0,
-			MaxCredit:   0.0,
+			Balance:     m.New(1000, 0),
+			MaxCredit:   m.Zero(),
 			LastUpdated: time.Now().Unix(),
 		},
 	}

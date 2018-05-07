@@ -1,5 +1,9 @@
 package datacontract
 
+import (
+	m "github.com/usemam/ledger-cloud/money"
+)
+
 const (
 	// TransactionTypeNewAccount - 'New Account' transaction type
 	TransactionTypeNewAccount = iota
@@ -16,7 +20,7 @@ type Transaction struct {
 	UserID      string
 	Date        int64
 	Type        int
-	Amount      float32
+	Amount      m.Money
 	Origin      string
 	Destination string
 }
@@ -25,8 +29,8 @@ type Transaction struct {
 type Account struct {
 	UserID      string
 	Name        string
-	Balance     float32
-	MaxCredit   float32
+	Balance     m.Money
+	MaxCredit   m.Money
 	LastUpdated int64
 }
 
@@ -34,7 +38,7 @@ type Account struct {
 type Snapshot struct {
 	UserID       string
 	CategoryName string
-	Balance      float32
+	Balance      m.Money
 	DateFrom     int64
 	DateTo       int64
 }
