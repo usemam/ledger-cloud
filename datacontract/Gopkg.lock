@@ -2,13 +2,14 @@
 
 
 [[projects]]
+  branch = "master"
   name = "github.com/usemam/ledger-cloud"
   packages = ["money"]
-  revision = "e43ca3976da48158eafa218c626c807c32afcf07"
+  revision = "a41a4f7cde549e958168624b77ce02dd42e32be1"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "331a584340b185e1e5a2843dc7f0012d74d241ee1b7c18a39ac51962709b712c"
+  inputs-digest = "a3c7f254c179dca81a7521e87c3bd8bb745a159ca0fff3e85267bdc0feaf0d2c"
   solver-name = "gps-cdcl"
   solver-version = 1

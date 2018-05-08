@@ -14,16 +14,17 @@
   revision = "ded0c29b24f96f46cf349e6701b099db601cf8ec"
 
 [[projects]]
+  branch = "master"
   name = "github.com/usemam/ledger-cloud"
   packages = [
     "datacontract",
     "money"
   ]
-  revision = "55090e091ebb4abfbb6ae23ab8dc3e625343be63"
+  revision = "a41a4f7cde549e958168624b77ce02dd42e32be1"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "0c9b15b552a1bb6b8e39c3f7b3481811512f73a24d3f2f360bea980192cb4407"
+  inputs-digest = "89f4294b6e097a74bc7ce476788c051ad0e70d0ea0c6231c655247a2116f577b"
   solver-name = "gps-cdcl"
   solver-version = 1

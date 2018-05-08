@@ -29,6 +29,10 @@
   branch = "master"
   name = "github.com/gorilla/mux"
 
+[[constraint]]
+  branch = "master"
+  name = "github.com/usemam/ledger-cloud"
+
 [prune]
   go-tests = true
   unused-packages = true
