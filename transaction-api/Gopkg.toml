@@ -24,6 +24,10 @@
 #   go-tests = true
 #   unused-packages = true
 
+[metadata.heroku]
+  root-package = "github.com/usemam/ledger-cloud/transaction-api"
+  go-version = "1.10.2"
+  install = [ "./..." ]
 
 [[constraint]]
   branch = "master"
