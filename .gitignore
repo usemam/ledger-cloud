@@ -14,8 +14,4 @@
 .glide/
 .env
 
-#!*/vendor/
 */vendor/*
-#!*/vendor/github.com/
-#*/vendor/github.com/*
-#!*/vendor/github.com/usemam/

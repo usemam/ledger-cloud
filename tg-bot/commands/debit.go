@@ -6,6 +6,7 @@ type DebitCommand struct {
 }
 
 // Execute - Command interface implementation
+// Usage: /debit account_name amount category_name [date]
 func (cmd *DebitCommand) Execute(args string) (string, error) {
 	return "", &NotImplementedCommandError{"debit"}
 }

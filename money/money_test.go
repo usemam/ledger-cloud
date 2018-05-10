@@ -1,11 +1,10 @@
 package money
 
 import (
-	"fmt"
 	tst "testing"
 )
 
-func TestStringFormatting(t *tst.T) {
+func TestString_Formatting(t *tst.T) {
 	m := map[string]Money{
 		"$0.00":         Money{0, 0},
 		"$100.00":       Money{100, 0},
@@ -17,37 +16,34 @@ func TestStringFormatting(t *tst.T) {
 	for k, v := range m {
 		s := v.String()
 		if s != k {
-			t.Log(fmt.Sprintf("Expected %s but was %s", k, s))
-			t.Fail()
+			t.Errorf("Expected %s but was %s", k, s)
 		}
 	}
 }
 
-func TestAddZero(t *tst.T) {
+func TestAdd_Zero(t *tst.T) {
 	var (
 		whole uint = 5
 		part  uint = 20
 	)
 	m := Money{whole, part}.Add(Money{})
 	if m.Whole != whole || m.Part != part {
-		t.Log("Adding zero resulted amounts different from original.")
-		t.Fail()
+		t.Error("Adding zero resulted amounts different from original.")
 	}
 }
 
-func TestSubZero(t *tst.T) {
+func TestSub_Zero(t *tst.T) {
 	var (
 		whole uint = 5
 		part  uint = 20
 	)
 	m := Money{whole, part}.Sub(Money{})
 	if m.Whole != whole || m.Part != part {
-		t.Log("Subtracting zero resulted amounts different from original.")
-		t.Fail()
+		t.Error("Subtracting zero resulted amounts different from original.")
 	}
 }
 
-func TestAddPartCarryToWhole(t *tst.T) {
+func TestAdd_PartCarryToWhole(t *tst.T) {
 	var (
 		whole1 uint = 5
 		part1  uint = 20
@@ -56,12 +52,11 @@ func TestAddPartCarryToWhole(t *tst.T) {
 	)
 	m := Money{whole1, part1}.Add(Money{whole2, part2})
 	if m.Whole != (whole1+whole2+1) || m.Part != 0 {
-		t.Log("Part carry when adding two values is incorrect.")
-		t.Fail()
+		t.Error("Part carry when adding two values is incorrect.")
 	}
 }
 
-func TestSubPartCarryToWhole(t *tst.T) {
+func TestSub_PartCarryToWhole(t *tst.T) {
 	var (
 		whole1 uint = 5
 		part1  uint = 20
@@ -70,27 +65,25 @@ func TestSubPartCarryToWhole(t *tst.T) {
 	)
 	m := Money{whole1, part1}.Sub(Money{whole2, part2})
 	if m.Whole != (whole1-whole2-1) || m.Part != (100+part1-part2) {
-		t.Log("Part carry when adding two values is incorrect.")
-		t.Fail()
+		t.Error("Part carry when adding two values is incorrect.")
 	}
 }
 
-func TestGtZero(t *tst.T) {
+func TestGt_Zero(t *tst.T) {
 	res := Money{}.Gt(Money{})
 	if res {
-		t.Log("Zero is not greater than zero.")
-		t.Fail()
+		t.Error("Zero is not greater than zero.")
 	}
 }
 
-func TestGtTrue(t *tst.T) {
+func TestGt_True(t *tst.T) {
 	res1, res2 := Money{5, 0}.Gt(Money{4, 0}), Money{5, 20}.Gt(Money{5, 0})
 	if !res1 || !res2 {
 		t.Fail()
 	}
 }
 
-func TestGtFalse(t *tst.T) {
+func TestGt_False(t *tst.T) {
 	res1, res2 := Money{4, 0}.Gt(Money{5, 0}), Money{5, 0}.Gt(Money{5, 20})
 	if res1 || res2 {
 		t.Fail()

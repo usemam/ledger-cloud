@@ -6,6 +6,7 @@ type CreditCommand struct {
 }
 
 // Execute - Command interface implementation
+// Usage: /credit category_name amount account_name [date]
 func (cmd *CreditCommand) Execute(args string) (string, error) {
 	return "", &NotImplementedCommandError{"credit"}
 }
