@@ -3,6 +3,12 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/araddon/dateparse"
+  packages = ["."]
+  revision = "1e64c9214ab00f5ed65d81b8d4db2f6496aa2065"
+
+[[projects]]
+  branch = "master"
   name = "github.com/go-telegram-bot-api/telegram-bot-api"
   packages = ["."]
   revision = "212b1541150cbfcc268fbeb3b15c14383e638409"
@@ -25,6 +31,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8215d5cb3cc2e536dfb7a76ef492b3d1fbe305eb671ecb8783a82adeceb0c633"
+  inputs-digest = "e3f842990160420e97bb3dbac17eba4a2a37b43f5ed70d76bd778ea41021d334"
   solver-name = "gps-cdcl"
   solver-version = 1
